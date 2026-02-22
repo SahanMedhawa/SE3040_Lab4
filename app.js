@@ -42,16 +42,16 @@ https.get('https://jsonplaceholder.typicode.com/posts/1', (resp) => {
 });
 
 // Promises
-const myPromise = new Promise((resolve, reject) => { 
-  if (condition) { 
-    resolve('Success!'); 
-  } else { 
-    reject('Failure!'); 
-  } 
-}); 
- 
-myPromise.then((result) => { 
-  console.log(result); 
-}).catch((error) => { 
-  console.log(error); 
+const myPromise = new Promise((resolve, reject) => {
+  const condition = true;   // define it
+
+  if (condition) {
+    resolve('Success!');
+  } else {
+    reject('Failure!');
+  }
 });
+
+myPromise
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error));
